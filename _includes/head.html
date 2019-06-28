@@ -1,19 +1,59 @@
-<!doctype html>
-<html class="no-js" lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>{{ page.title }} - {{ site.title }}</title>
-  <meta name="description" content="{% if .page.description %}{{ .page.description }}{% else %}{{ .site.description }}{% endif %}">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="{{ "/img/favicon.png" | absolute_url }}"/>
-  <link rel="stylesheet" href="https://yui-s.yahooapis.com/pure/0.6.0/pure-min.css">
-  <!--[if lte IE 8]>
-  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://yui-s.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
-  <!--<![endif]-->
-  <link rel="stylesheet" href="{{ "/css/main.min.css" | absolute_url }}">
-</head>
-<body>
+<nav id="header" class="py-h py-md-1h navbar fixed-top navbar-light bg-primary navbar-expand-md {{include.headerClass}}">
+  <div class="d-flex align-items-center justify-content-between container">
+      <div class="navbar-brand logo">
+        <a href="{{site.baseurl}}/"><img class="" alt="{{site.title}}" src="{{site.baseurl}}/dist/images/logo.svg" /></a>
+      </div>
+
+      <button id="toggle-main-menu" class="hamburger hamburger--collapse collapsed" type="button" data-toggle="collapse" data-target="#navbarLayout" aria-controls="navbarLayout" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarLayout">
+        <nav class="main-nav">
+        <ul class="navigation">
+          {% for link in site.menus.navigation %}
+          <li class="{% if link.children %}nested {% endif %}{% if url == link.url %}current{% endif %}">
+            {% if link.children %}
+            <ul class="first-level">
+              {% for child in link.children %}
+              <li>
+                {% if child.children %}
+                <ul class="second-level">
+                  {% for child in child.children %}
+                  <li>
+                    <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+                <a href="{{ child.url | absolute_url }}"{% if child.target %} target="_blank" {% endif %}>
+                  {{ child.title }}
+                  {% if child.childen %}
+                    <i class='icon-right-dir-2'></i>
+                  {% endif %}
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+            <a href="{{ link.url | absolute_url }}"{% if link.target %} target="_blank" {% endif %}>
+                  {{ link.title }}
+                  {% if link.childen %}
+                    <i class='icon-chevron-down'></i>
+                  {% endif %}
+                </a>
+          </li>
+          {% endfor %}
+        </ul>
+    </nav>
+
+        <div class="d-block d-md-none text-center mt-4 text-white">
+         
+        </div>
+
+      </div>
+  </div>
+</nav>
+

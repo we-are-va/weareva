@@ -1,0 +1,63 @@
+// **** Fonts
+$primary-font: "Khula", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+$navbar-height-collapsed: 56px;
+
+
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.875rem;
+$font-size-lg: 1.5rem;
+
+// **** Brand Colours
+$blue: #14377d;
+$aqua: #00b0dc;
+$aqua-medium: #63cae1;
+$aqua-light:  #eff7fa;
+$aqua-lightest: #eff7fa;
+
+// **** Other Colours
+$white: #fff;
+$black: #000;
+
+// Primary & Secondary Colours
+$primary-color:       $blue;
+$secondary-color:     $aqua;
+$default-color:       $blue;
+$highlight-color: $aqua-medium;
+
+$theme-colors: ();
+$theme-colors: map-merge((
+  "primary": $primary-color,
+  "secondary": $secondary-color,  
+  "white": $white,
+  "light": $aqua-light,
+  "highlight": $aqua-medium,
+), $theme-colors);
+// stylelint-enable
+
+// Spacing
+// stylelint-disable
+$spacer: 1rem !default;
+$spacers: ();
+$spacers: map-merge((
+  0: 0,
+  q: ($spacer * .25),
+  h: ($spacer * .5),
+  1: ($spacer * 1),
+  1h: ($spacer * 1.5),
+  2: ($spacer * 2),
+  2h: ($spacer * 2.5),
+  3: ($spacer * 3),
+  3h: ($spacer * 3.5),
+  4: ($spacer * 4),
+  5: ($spacer * 5),
+  6: ($spacer * 6),
+  7: ($spacer * 7),
+  8: ($spacer * 8),  
+  9: ($spacer * 9)
+), $spacers);
+
+
+$grid-gutter-width: 30px;
+$gap: ($grid-gutter-width/2);

@@ -1,38 +1,34 @@
 // **** Fonts
-$primary-font: "Khula", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$primary-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
+$headings-font: "clarendon-text-pro", serif;
 
 $navbar-height-collapsed: 56px;
-
 
 $font-size-xs: 0.75rem;
 $font-size-sm: 0.875rem;
 $font-size-lg: 1.5rem;
 
 // **** Brand Colours
-$blue: #14377d;
-$aqua: #00b0dc;
-$aqua-medium: #63cae1;
-$aqua-light:  #eff7fa;
-$aqua-lightest: #eff7fa;
+$rocketred: #ff4b46;
+$dark: #141414;
 
 // **** Other Colours
 $white: #fff;
 $black: #000;
 
 // Primary & Secondary Colours
-$primary-color:       $blue;
-$secondary-color:     $aqua;
-$default-color:       $blue;
-$highlight-color: $aqua-medium;
+$primary-color:       $rocketred;
+$secondary-color:     $dark;
+$default-color:       $black;
+$highlight-color: $rocketred;
 
 $theme-colors: ();
 $theme-colors: map-merge((
   "primary": $primary-color,
   "secondary": $secondary-color,  
   "white": $white,
-  "light": $aqua-light,
-  "highlight": $aqua-medium,
+  "highlight": $highlight-color,
 ), $theme-colors);
 // stylelint-enable
 

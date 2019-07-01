@@ -6,7 +6,8 @@ $(function() {
 
   function load_resize() {
     $navbar = $("#header"); 
-    $('body').css('padding-top', $navbar.outerHeight());
+    
+    //$('body').css('padding-top', $navbar.outerHeight());
 
     if($(window).width() >= 768) {
       //console.log("window height: " + $(window).height());

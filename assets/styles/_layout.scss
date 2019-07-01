@@ -1,249 +1,46 @@
-.page {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  .wrapper {
-    flex: 1;
-  }
-}
-
-section.layout {
-  position: relative;
-
-  header { 
-    display: none;
-    @include media-breakpoint-up(lg) {
-      // visibility: none;
-      // animation: slideInUp 1s ease forwards;
-      font-size: $font-size-sm;
-      font-weight: 700;
-      display: block;
-      transform: rotate(-90deg);
-      position: absolute;
-      text-align: right;
-      width: 200px;
-      top: 140px;
-      left: -70px;
-      z-index: 1021;
-      &:after {
-        content: "";
-        width: 35px;
-        display: inline-block;
-        height: 3px;
-        background: $white;
-        color: inherit;
-        margin-left: 0.5rem;
-        margin-bottom: 0.2rem;
-      }
-      &.text-highlight::after { background-color: $highlight-color; }
-      &.text-primary::after { background-color: $primary-color; }
-    }
-
-    @include media-breakpoint-up(xl) {
-      left: -50px;
-    }
-  }
-}
-
-
-
-.navbar-brand {
-  width: 220px;
-  margin-right: 0;
-  img, svg {
-    width: 100%;
+header {
+  z-index: 10;
+  .logo {
+    max-width: 100px;
     height: auto;
   }
-  a {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-  @include min(375px) {
-    width: 260px;
-  }
-  @include media-breakpoint-up(md) {
-    width: 300px;
+
+}
+
+
+#va-slides {
+  height: 100vh;
+
+  img {
+    height: 100vh;
+    object-fit: cover;
   }
 }
 
-#header {
-  background-color: transparent;
-  transition: all 0.35s ease-out;
 
-  @include media-breakpoint-down(md) {
-    height: $navbar-height-collapsed;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+.work-front {
+  .card {
+    border: none;
+    background: transparent;
+    border-radius: 0;
 
-  #navbarLayout {
-    justify-content: flex-end;
-  }
-
-  ul.nav > li > a {
-    color: $white;
-    position: relative;
-    font-weight: 600;
-
-    &:hover:after,
-    &:focus:after,
-    &:active:after {
-      width: 80%;
-    }
-
-    &:after {
-      content: '';
+    .description {
       position: absolute;
-      bottom: 4px;
-      left: 50%;
-      width: 0%;
-      transform: translateX(-50%);
-      height: 3px;
-      background: $highlight-color;
-      transition: 0.35s;
+      left: 1em;
+      bottom: 1em;
+
+      h4 {
+
+      }
     }
 
-    &:hover {
-      color: $white;
-    }
-    &.active, &:active:hover {
-      color: $highlight-color;
-    }
   }
 }
 
-#header #navbarLayout {
-  @include media-breakpoint-down(md) {
-    background-color: $primary-color;
-   // display: block !important;
-    position: fixed;
-    top: $navbar-height-collapsed;
-    left: 0;
-    width: 100%;
-    height: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.35s, visibility 0.35s, height 0.35s;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-
-    #main-menu {
-      font-size: 1.5rem;
-      text-align: center;
-      flex-wrap: nowrap;
-      flex-direction: column;
-      > li {
-        opacity: 0;
-        //animation: fadeInRight 0.5s ease forwards;
-        //animation-delay: 0.35s;
-      }
-      > li > a {
-        font-weight: 700;
-        display: inline-block;
-        &:hover:after,
-        &:focus:after,
-        &:active:after {
-          width: 90%;
-        }
-        &:after {
-          bottom: 0.25rem;
-          height: 4px;
-        }
-      }
-
-    }
-
-    li.address {
-      display: none !important;
-    }
-    .social {
-      margin-top: 2rem !important;
-    }
-
-    &.show {
-      opacity: 1;
-      visibility: visible;
-      height: calc(100vh - #{$navbar-height-collapsed});
-      z-index: 1020;
-      border-top: 3px solid $white;
-      #main-menu > li {
-        animation: fadeInRight 0.5s ease forwards;
-        animation-delay: 0.35s;
-        &:nth-of-type(2) {
-          animation-delay: 0.4s;
-        }
-        &:nth-of-type(3) {
-          animation-delay: 0.45s;
-        }
-        &:nth-of-type(4) {
-          animation-delay: 0.5s;
-        }
-      }
-    }
-
-
-    @include max(375px) {
-      #main-menu {
-        //margin-top: 2.5rem !important;
-        font-size: 1.2rem;
-      }
-      .contact h2 {
-        font-size: 1.2rem;
-      }
-    }
-
-
-  }
-
-}
-
-.hamburger {
-  padding: 0;
-  padding-top: 10px;
-  outline: none;
-  z-index: 10;
-  cursor: pointer;
-  height: 40px;
-  @include media-breakpoint-up(md) {
-    display: none;
-  }
-  &:focus {
-    outline: none;
-  }
-  .hamburger-inner,
-  .hamburger-inner::before,
-  .hamburger-inner::after {
-    background: $white;
-  }
-  // .hamburger-inner::after {
-  //   width: 18px;
-  //   right: 0;
-  // }
-  &.is-active {
-    .hamburger-inner::after {
-      width: inherit;
-      right: unset;
-    }
-  }
-}
-
-
-.lock-scroll {
-  overflow: hidden;
-}
-
-
-
-.layout-subfooter {
-  font-weight: 300;
-  .weareva a{
-    color: rgba($white, 0.4);//$gray-600;//lighten($primary-color, 30%) !important;
-  }
-  a {
-    font-weight: 300;
+footer {
+  background: $black;
+  .footer-logo {
+      max-width: 100%;
+      height: auto;
   }
 }

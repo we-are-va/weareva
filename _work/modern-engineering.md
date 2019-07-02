@@ -6,10 +6,14 @@ description: 'Computer-Based Training for Cogntive Behavioural Therapy: An Addic
   Program for Canada'
 banner_image: "/uploads/2018/02/17/bridge3.jpg"
 sub_heading: A post-modern taking on Engineering in the Digital World
+brand_primary_color: "#4b42f5"
+brand_secondary_color: "#1d1961"
 tags:
 - engineering
 - research
 slug: ''
+layout: work-single
+youtubeId: lDi9uFcD7XI
 ---
 
 ## Overview

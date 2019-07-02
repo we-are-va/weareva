@@ -4,6 +4,24 @@ header {
     max-width: 100px;
     height: auto;
   }
+  nav {
+     a {
+      color: $white;
+
+      &:after {
+        display:block;
+        content: '';
+        border-bottom: solid 2px $white;  
+        transform: scaleX(0);  
+        transition: transform 250ms ease-in-out;
+      }
+      &:hover {
+        color: $white;
+        &:after { transform: scaleX(1); }
+      }
+    }
+  }
+ 
 
 }
 
@@ -37,10 +55,42 @@ header {
   }
 }
 
-footer {
+// work single
+
+.section-hero {
+  height: 100vh;
+  img {
+    height: 100vh;
+    object-fit: cover;
+  }
+  .hero-title {
+    bottom: 3em;
+    width: 100%;
+  }
+}
+
+footer.site-footer {
   background: $black;
   .footer-logo {
-      max-width: 100%;
+      max-width: 170px;
       height: auto;
+      margin-bottom: 2em;
   }
+  a {
+      color: $white;
+      display: inline-block;
+
+      &:after {
+        display:block;
+        content: '';
+        border-bottom: solid 1px $white;  
+        transform: scaleX(0);  
+        transition: transform 250ms ease-in-out;
+      }
+      &:hover {
+        text-decoration: none;
+        color: $white;
+        &:after { transform: scaleX(1); }
+      }
+    }
 }

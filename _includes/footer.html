@@ -1,4 +1,4 @@
-<footer class="site-footer py-7">
+<footer class="site-footer py-4">
 
 	<div class="container">
         
@@ -13,31 +13,34 @@
 
         <div class="row">
 
-            <div class="col-md-6">
+            <div class="col-md-8">
 
                 {% include address.html %}
             
             </div>
+            <div class="col-md-3">
 
-            <div class="col-md-6 text-right">
+                <p class="h4">Networking, project enquires<br> – <a href="mailto:hello@weareva.com.au">hello@weareva.com.au</a></p>
+            </div>
+            <div class="col-md-1">
 
-               Social links
+               <ul class="list-unstyled">
+                <li><a class="social-link" href="https://www.facebook.com">Facebook</a></li>
+                <li><a class="social-link" href="https://www.instgram.com">Instagram</a></li>
+                <li><a class="social-link" href="https://www.linkedin.com">LinkedIn</a></li>
 
             </div>
 
-        </div>
-
-        <div class="row">
-
             <div class="col-md-12">
 
-                <div class="copyright">
+                <div class="mt-2 small copyright text-muted">
                     <p>
-                        &copy;{{ 'now' | date: "%Y" }} {{ site.title }} - All Rights Reserved<br>
+                        &copy; {{ site.title }} {{ 'now' | date: "%Y" }} - <a class="text-muted" href="privacy">Privacy</a> & <a class="text-muted" href="cookies">Cookies</a>
                     </p>
                 </div>
 
             </div>
+
         </div>
 
 	</div>

@@ -9,6 +9,7 @@ tags:
 - engineering
 - research
 slug: ''
+layout: work-single
 ---
 
 ## Overview

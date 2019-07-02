@@ -1,5 +1,29 @@
 // **** Fonts
-$primary-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@font-face {
+    font-family: 'Suisse-Regular';
+    src: url('../../webfonts/SuisseIntl-Regular-WebTrial.eot');
+    src: url('../../webfonts/SuisseIntl-Regular-WebTrial.eot?#iefix') format('embedded-opentype'),
+         url('../../webfonts/SuisseIntl-Regular-WebTrial.woff') format('woff'),
+         url('../../webfonts/SuisseIntl-Regular-WebTrial.ttf') format('truetype'),
+         url('../../webfonts/SuisseIntl-Regular-WebTrial.svg#On-AirInline') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Suisse-Bold';
+    src: url('../../webfonts/SuisseIntl-Bold-WebTrial.eot');
+    src: url('../../webfonts/SuisseIntl-Bold-WebTrial.eot?#iefix') format('embedded-opentype'),
+         url('../../webfonts/SuisseIntl-Bold-WebTrial.woff') format('woff'),
+         url('../../webfonts/SuisseIntl-Bold-WebTrial.ttf') format('truetype'),
+         url('../../webfonts/SuisseIntl-Bold-WebTrial.svg#On-AirInline') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$primary-font: "Suisse-Regular", sans-serif;
+$bold-font: "Suisse-Bold", sans-serif;
 
 $headings-font: "clarendon-text-pro", serif;
 

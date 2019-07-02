@@ -4,35 +4,7 @@ $(function() {
   var $form         = $("#contact-form");
   var $navbarLayout = $("#navbarLayout");
 
-  function load_resize() {
-    $navbar = $("#header"); 
-    
-    //$('body').css('padding-top', $navbar.outerHeight());
-
-    if($(window).width() >= 768) {
-      //console.log("window height: " + $(window).height());
-      //console.log("navbar outerheight: " + $navbar.outerHeight());
-      //console.log("hero footer outerheight: " + $hero_footer.outerHeight());
-      var hero_content_height = $(window).height() - $navbar.outerHeight() - $hero_footer.outerHeight();
-      //console.log("hero content height: " + hero_content_height);
-     
-      if(hero_content_height < 500) {
-        hero_content_height = 500;
-      }
-
-      $('#hero-content, #hero-carousel').css('height', hero_content_height);
-    }
-
-    if($(window).width() >= 992) {
-      $('.layout-image').css('height', ($(window).width()/2.5));
-    }    
   
-  }
-
-  load_resize();
-  $(window).resize(function() { 
-    load_resize(); 
-  }); // onresize
 
 
   // Mobile menu
@@ -47,36 +19,15 @@ $(function() {
     $navbarLayout.collapse('hide');
   });
 
-  // Carousel
-  $('#hero-carousel').carousel({
-    interval: 6000, pause: false, ride: true
-  });
-
   // ScrollReveal
-  window.sr = new ScrollReveal();
-  sr.reveal('section h2, .reveal, section header');
-  // Reveal in a ripple efffect
-  sr.reveal('.howwehelp-action', { duration: 800 }, 100);
-  sr.reveal('#contact .contact li, #whyparachute p, #wearewithyou p, #ourpromise p', { duration: 500 }, 50);
+  // window.sr = new ScrollReveal();
+  // sr.reveal('section h2, .reveal, section header');
+  // // Reveal in a ripple efffect
+  // sr.reveal('.howwehelp-action', { duration: 800 }, 100);
+  // sr.reveal('#contact .contact li, #whyparachute p, #wearewithyou p, #ourpromise p', { duration: 500 }, 50);
   
   // Scrollmagic
-  if($(window).width() > 1024) {
-    var controller = new ScrollMagic.Controller({
-      globalSceneOptions: {
-        triggerHook: 'onLeave'              
-      }
-    });
 
-    var slides = ['#intro', '#whyparachute', '#wearewithyou', '#ourpromise',  '#contact']; 
-
-    // create scene for every slide
-    for (var i=0; i<slides.length; i++) {
-      $(slides[i]).addClass('layout-fs');
-      new ScrollMagic.Scene({ triggerElement: slides[i] })
-        .setPin(slides[i])
-        .addTo(controller);
-    }
-  }
 
   $(".form-group input, .form-group textarea").focusout(function(){
       if($(this).val() === ""){
@@ -87,75 +38,15 @@ $(function() {
     $(this).parent().addClass('focus');
   });
 
-  console.log("Welcome to Parachute.");
-
-  $form.submit(function( event ) {
-    console.log( "Handler for .submit() called." );
-    event.preventDefault();
-
-    var datastring = $(this).serializeArray();
-
-    var recaptcha_response = grecaptcha.getResponse();
-
-    //console.log(recaptcha_response);
-
-    //recaptcha failed validation
-    if (recaptcha_response.length == 0) {
-      $("#form-error").html("Please tick the recaptcha box.").show().delay(5000).fadeOut(300);
-      return false;
-    }
-    //recaptcha passed validation
-    else {
-      console.log("Recaptcha accepted");
-    }
-
-    var fields = '<ul>'; var br = '';
-
-    $.each(datastring, function( i, fld ) {
-      br = fld.name !== 'Message' ? '' : '<br>';
-      fields+="<li><b>" + fld.name + ":</b> " + br + fld.value + "</li>";
-    });
-
-    fields+="</ul>";
-
-    var html = "<p>Hello!</p><p>You have received a new Parachute website enquiry.</p>" +
-    fields + "<p>&nbsp;</p><p>&nbsp;</p><hr><p><em><small>This is an automated message from https://www.parachute.net.au</small></em></p>";
-
-    $.ajax({
-      type: 'POST',
-      url: 'https://mandrillapp.com/api/1.0/messages/send.json',
-      data: {
-        'key': 'qQ2_bQU2BL_ad3Sdvy7RgA', // SAJEN MANDRILL API KEY
-        'message': {
-          'from_email': 'webform@parachute.net.au',
-          'to': [
-            {
-              'email': 'help@parachute.net.au',
-              'name': 'Parachute Team',
-              'type': 'to'
-            }
-            // ,{
-            //   'email': 'skye@weareva.com.au',
-            //   'name': 'VA',
-            //   'type': 'to'
-            // }
-          ],
-          'autotext': 'true',
-          'subject': 'Web enquiry from ' + $("#contact-name").val(),
-          'html': html,
-          'track_opens': true,
-          'track_clicks': true
-        }
-      }
-    }).fail(function(response) {
-      $("#form-error").html("Sorry, there was an error sending your enquiry. Please try again soon or email help@parachute.net.au directly.").show().delay(5000).fadeOut(300);
-    }).done(function(response) {
-      console.log("Enquiry sent!");
-      var thanks_html = $("#thankyou").html().replace("[NAME]", $("#contact-name").val()); 
-      $form.slideUp(300);
-      $("#thankyou").html(thanks_html).slideDown(500);
-    });
-  });
+  //console.log("Welcome to VA BOOOOOOM!!!");
+  console.log("##:::::'##:'########::::'###::::'########::'########:'##::::'##::::'###::::");
+  console.log("##:'##: ##: ##.....::::'## ##::: ##.... ##: ##.....:: ##:::: ##:::'## ##:::");
+ console.log("##: ##: ##: ##::::::::'##:. ##:: ##:::: ##: ##::::::: ##:::: ##::'##:. ##::");
+ console.log("##: ##: ##: ######:::'##:::. ##: ########:: ######::: ##:::: ##:'##:::. ##:");
+ console.log("##: ##: ##: ##...:::: #########: ##.. ##::: ##...::::. ##:: ##:: #########:");
+ console.log("##: ##: ##: ##::::::: ##.... ##: ##::. ##:: ##::::::::. ## ##::: ##.... ##:");
+console.log(". ###. ###:: ########: ##:::: ##: ##:::. ##: ########:::. ###:::: ##:::: ##:");
+console.log(":...::...:::........::..:::::..::..:::::..::........:::::...:::::..:::::..::");
 
     // if($(window).width() >= 992) {
     //   $('#fullpage').fullpage({
@@ -204,6 +95,38 @@ $(function() {
         }, 'xml');
 
     });
+
+    $('.carousel-item', '.show-neighbors').each(function(){
+      var next = $(this).next();
+      if (! next.length) {
+        next = $(this).siblings(':first');
+      }
+      next.children(':first-child').clone().appendTo($(this));
+    }).each(function(){
+      var prev = $(this).prev();
+      if (! prev.length) {
+        prev = $(this).siblings(':last');
+      }
+      prev.children(':nth-last-child(2)').clone().prependTo($(this));
+    });
+
+
+    // Play when in viewport
+      $(window).on('scroll load', function(){
+        $('.responsive-vid iframe').each( function(i){
+          player.pauseVideo();
+          var scroll_position = $(window).scrollTop();
+          var bottom_of_video = $(this).offset().top + ($(this).outerHeight() / 2);
+          var bottom_of_window3 = $(window).scrollTop() + $(window).height();
+          if( bottom_of_window3 > bottom_of_video && scroll_position < bottom_of_video ) {  
+            player.playVideo();
+            $('#player').css({'opacity':'1'});
+          } else {
+            player.pauseVideo();
+            $('#player').css({'opacity':'.6'});
+          }
+        });
+      });
 
 
 });

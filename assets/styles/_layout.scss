@@ -5,19 +5,38 @@ header {
     height: auto;
   }
   nav {
-     a {
+     a.nav-link {
       color: $white;
-
+      display: block;
+      position: relative;
+      padding: 0.5em 0;
+      margin: 0 0.5em;
+      &:before,
       &:after {
-        display:block;
-        content: '';
-        border-bottom: solid 2px $white;  
-        transform: scaleX(0);  
-        transition: transform 250ms ease-in-out;
+        content: "";
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+        left: auto;
+        width: 0;
+        height: 3px;
+        z-index: 2;
+      }
+      &:before {
+        background-color: $primary-color;
+        transition: all .25s cubic-bezier(.694,.048,.335,1) .15s;
+      }
+      &:after {
+        background-color: $white;
+        transition: all .25s cubic-bezier(.694,.048,.335,1);
       }
       &:hover {
         color: $white;
-        &:after { transform: scaleX(1); }
+        &:after, &:before { 
+          width: 100%;
+          left: 0;
+        }
+
       }
     }
   }
@@ -78,19 +97,37 @@ footer.site-footer {
   }
   a {
       color: $white;
-      display: inline-block;
-
+      display: inline;
+      position: relative;
+      padding: 0;
+      margin: 0;
+      &:before,
       &:after {
-        display:block;
-        content: '';
-        border-bottom: solid 1px $white;  
-        transform: scaleX(0);  
-        transition: transform 250ms ease-in-out;
+        content: "";
+        position: absolute;
+        bottom: 1px;
+        right: 0;
+        left: auto;
+        width: 0;
+        height: 2px;
+        z-index: 2;
+      }
+      &:before {
+        background-color: $primary-color;
+        transition: all .25s cubic-bezier(.694,.048,.335,1) .15s;
+      }
+      &:after {
+        background-color: $white;
+        transition: all .25s cubic-bezier(.694,.048,.335,1);
       }
       &:hover {
         text-decoration: none;
         color: $white;
-        &:after { transform: scaleX(1); }
+        &:after, &:before { 
+          width: 100%;
+          left: 0;
+        }
+
       }
-    }
+  }
 }

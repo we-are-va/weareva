@@ -52,11 +52,13 @@ fields:
   type: blocks
   label: blocks
   template_types:
+  - content-feature
   - 1-column-text
-  - 2-column-media-element
   - 2-column-text
   - 3-column-text
   - full-width-media-element
+  - 2-column-media-element
+  - gallery
   - video-element
   config:
     min: 

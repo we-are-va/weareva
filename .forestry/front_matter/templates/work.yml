@@ -38,3 +38,14 @@ fields:
   description: The secondary brand colour color for Titles
   config:
       color_format: Hex  
+- name: intro
+  type: textarea
+  label: Intro
+  description: Short description of the page
+  hidden: false
+  default: ''
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+

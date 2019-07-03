@@ -1,0 +1,10 @@
+---
+label: video-element
+hide_body: false
+fields:
+- type: file
+  name: video
+  label: Video
+- type: text
+  name: caption
+  label: Caption

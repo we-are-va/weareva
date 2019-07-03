@@ -6,7 +6,7 @@ fields:
   hidden: true
   label: block
   name: block
-  default: one-column-1
+  default: one-column-text
 - type: include
   name: column
   label: Column

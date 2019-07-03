@@ -4,9 +4,9 @@ date: '2016-04-20T00:00:00.000+00:00'
 categories: []
 description: 'Computer-Based Training for Cogntive Behavioural Therapy: An Addictions
   Program for Canada'
-intro: |-
-  ## Horizon Festival connects artists, industries, communities and audiences through an award-winning celebration of arts and culture.
-  ## With a 4 year relationship, VA had the pleasure of refreshing the website design and functionality.
+intro: "## Horizon Festival connects artists, industries, communities and audiences
+  through an award-winning celebration of arts and culture.\n\n## With a 4 year relationship,
+  VA had the pleasure of refreshing the website design and functionality. "
 sector: Arts / Events
 services:
 - Web Design

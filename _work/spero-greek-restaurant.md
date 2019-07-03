@@ -18,8 +18,14 @@ blocks:
   headline: test
 - template: video-element
   caption: test caption
+  video: "/uploads/2019/07/03/Horizon Festival – 10 arts-fuelled days.mp4"
 - template: 3-column-text
   block: three-column-1
+- template: 2-column-media-element
+  block: media-2
+  image_1:
+    image: "/uploads/2018/12/07/compass.jpg"
+    caption: asdfasdf
 
 ---
 1	113	201	

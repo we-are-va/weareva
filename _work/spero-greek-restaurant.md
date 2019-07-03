@@ -14,7 +14,10 @@ youtubeId: lDi9uFcD7XI
 blocks:
 - template: 1-column-text
   block: one-column-1
+  content: test
+  headline: test
 - template: video-element
+  caption: test caption
 - template: 3-column-text
   block: three-column-1
 

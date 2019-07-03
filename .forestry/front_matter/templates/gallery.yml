@@ -1,4 +1,15 @@
 ---
 label: gallery
 hide_body: true
-fields: []
+fields:
+- name: block
+  type: text
+  config:
+    required: false
+  label: block
+  hidden: true
+  default: gallery
+- name: gallery
+  type: image_gallery
+  config: {}
+  label: Gallery

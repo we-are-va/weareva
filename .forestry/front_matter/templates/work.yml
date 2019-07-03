@@ -31,13 +31,13 @@ fields:
   label: Brand Primary Color
   description: The main brand colour color for the page background.
   config:
-      color_format: Hex  
+    color_format: Hex
 - name: brand_secondary_color
   type: color
   label: Brand Secondary Color
   description: The secondary brand colour color for Titles
   config:
-      color_format: Hex  
+    color_format: Hex
 - name: intro
   type: textarea
   label: Intro
@@ -48,4 +48,16 @@ fields:
     wysiwyg: true
     schema:
       format: markdown
-
+- name: blocks
+  type: blocks
+  label: blocks
+  template_types:
+  - 1-column-text
+  - 2-column-media-element
+  - 2-column-text
+  - 3-column-text
+  - full-width-media-element
+  - video-element
+  config:
+    min: 
+    max: 

@@ -1,11 +1,13 @@
 ---
-title: 'Electric Vehicle '
+title: Matthew Flinders Anglican College
 tags:
 - research
 date: 2018-02-25 19:07:50 +0000
 banner_image: "/uploads/2018/02/25/car.jpg"
 sub_heading: 'Human centered design in the electric vehicle era '
 slug: ''
+brand_primary_color: "#0a3261"
+brand_secondary_color: "#0c9191"
 layout: work-single
 ---
 Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.

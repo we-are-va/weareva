@@ -1,6 +1,6 @@
 ---
 title: Spero Greek Restaurant
-date: 2016-04-20 00:00:00 +0000
+date: '2016-04-20T00:00:00.000+00:00'
 categories: []
 description: 'Computer-Based Training for Cogntive Behavioural Therapy: An Addictions
   Program for Canada'
@@ -11,6 +11,13 @@ brand_secondary_color: "#f49af4"
 slug: ''
 layout: work-single
 youtubeId: lDi9uFcD7XI
+blocks:
+- template: 1-column-text
+  block: one-column-1
+- template: video-element
+- template: 3-column-text
+  block: three-column-1
+
 ---
 1	113	201	
 244	154	244	

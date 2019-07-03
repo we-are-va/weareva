@@ -6,12 +6,12 @@ description: 'Computer-Based Training for Cogntive Behavioural Therapy: An Addic
   Program for Canada'
 
 intro: |-
-  ## Horizon Festival connects artists, industries, communities and audiences through an award-winning
-  ## celebration of arts and culture.With a 4 year relationship, VA had the pleasure of refreshing the website design and functionality.
+  ## Horizon Festival connects artists, industries, communities and audiences through an award-winning celebration of arts and culture.
+  ## With a 4 year relationship, VA had the pleasure of refreshing the website design and functionality.
 sector: Arts / Events
 services: Web Design, Web development
 banner_image: "/uploads/2018/02/17/bridge3.jpg"
-sub_heading: A post-modern taking on Engineering in the Digital World
+sub_heading: Experience the Sunshine Coast's premier multi-arts festival.
 brand_primary_color: "#333"
 brand_secondary_color: "pink"
 slug: ''

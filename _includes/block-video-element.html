@@ -1,0 +1,21 @@
+<section class="block block-video">
+
+	<div class="container section-video">
+
+		<div class="row py-4 d-flex justify-content-center" data-aos="fade-in">
+			
+			<div class="col-md-8">
+
+				<video class="video" autoplay="" muted="">
+				        <source src="{{ section.video | relative_url }}" type="video/mp4">
+				</video>
+				{% if section.caption %}
+			     <figcaption>{{ section.caption }}</figcaption>
+			    {% endif %}
+
+			</div>
+
+		</div>
+		
+	</div>
+</section>

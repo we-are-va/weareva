@@ -21,7 +21,7 @@ layout: default
 	<div class="position-absolute hero-title">
 		<div class="container">
 				<h1 class="page-title">{{ page.title }}</h1>
-				<h3>Tagline for project here</h3>
+				<h3>{{ page.sub_heading }}</h3>
 		</div>
 	</div>
 
@@ -33,7 +33,7 @@ layout: default
 
 		<div class="row d-flex justify-content-between" data-aos="fade-in">
 		
-			<div class="col-sm-7">
+			<div class="col-sm-8">
 				
 				<h4 class="hero-color">Project</h4>
 				{{ page.intro  | markdownify }}
@@ -60,6 +60,10 @@ layout: default
 
 	</div>
 	
+	{% for section in page.blocks %} 
+		{% include block-{{ section.block }}.html %}
+	{% endfor %}
+
 	<div class="container section-logo">
 
 		<div class="row py-4" data-aos="fade-in">
@@ -125,7 +129,7 @@ layout: default
 
 			<div class="col-md-6">
 				<h3 class="hero-color">Heading</h3>
-				<p class="h1">Lorem ipsum dolor sit amet, con sectetuer adipiscing elit, sed diam nonummy nibh euismod lorem ipsum dolor sit amet. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
+				<p class="h2">Lorem ipsum dolor sit amet, con sectetuer adipiscing elit, sed diam nonummy nibh euismod lorem ipsum dolor sit amet. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
 			</div>
 
 		</div>
@@ -134,6 +138,23 @@ layout: default
 
 
 	<div class="container section-video">
+
+		<div class="row py-4 d-flex justify-content-center" data-aos="fade-in">
+			
+			<div class="col-md-8">
+
+				<video class="video" autoplay="" muted="">
+				        <source src="/uploads/2019/07/03/Horizon%20Festival%20%E2%80%93%2010%20arts-fuelled%20days.mp4" type="video/mp4">
+				</video>
+
+			</div>
+
+		</div>
+		
+	</div>
+
+
+	<div class="container section-video-embeded">
 
 		<div class="row py-4" data-aos="fade-in">
 			

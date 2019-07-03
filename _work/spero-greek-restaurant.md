@@ -13,7 +13,7 @@ layout: work-single
 youtubeId: lDi9uFcD7XI
 blocks:
 - template: 1-column-text
-  block: one-column-1
+  block: one-column-text
   content: test
   headline: test
 - template: 2-column-media-element
@@ -24,11 +24,8 @@ blocks:
   image_2:
     image: "/uploads/2018/02/17/college-building.jpg"
     caption: fdsffdfdf
-- template: video-element
-  caption: test caption
-  video: "/uploads/2019/07/03/Horizon Festival – 10 arts-fuelled days.mp4"
 - template: 3-column-text
-  block: three-column-1
+  block: three-column-text
 
 ---
 1	113	201	

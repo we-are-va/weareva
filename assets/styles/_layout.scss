@@ -88,6 +88,11 @@ header {
   }
 }
 
+.video {
+  max-width: 100%;
+  height: auto;
+}
+
 footer.site-footer {
   background: $black;
   .footer-logo {

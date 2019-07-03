@@ -33,6 +33,16 @@ blocks:
 - template: full-width-media-element
   block: media-1
   image: "/uploads/2019/07/03/_HZN-Horizon-2019-04.jpg"
+- template: 2-column-media-element
+  block: media-2
+  image_1:
+    image: "/uploads/2019/07/03/876-600x800-1.jpg"
+- template: 2-column-media-element
+  block: media-2
+  image_1:
+    image: "/uploads/2019/07/03/_HZN-Horizon-2019-03-1.jpg"
+  image_2:
+    image: "/uploads/2019/07/03/_HZN-Horizon-2019-02.jpg"
 
 ---
 1	113	201	

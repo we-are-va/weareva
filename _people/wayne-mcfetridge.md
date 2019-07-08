@@ -1,7 +1,7 @@
 ---
 title: Wayne McFetridge
 sub_heading: Director
-thumbnail: "/uploads/2017/11/14/filipe-almeida-192048 (1).jpg"
+thumbnail: "/uploads/team-wayne.jpg"
 email: 
 linkedin: ''
 layout: 'person'

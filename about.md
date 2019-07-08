@@ -1,7 +1,9 @@
 ---
 title: About
 heading: About VA
-layout: landing-page
+layout: about
+hero_image: '/uploads/about-hero.png'
+hero_video: ""
 show_staff: true
 menu:
   navigation:

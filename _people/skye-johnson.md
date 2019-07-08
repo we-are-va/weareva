@@ -1,6 +1,6 @@
 ---
 title: Skye Johnson
-thumbnail: "/uploads/2017/11/14/filipe-almeida-192048 (1).jpg"
+thumbnail: "/uploads/team-skye.jpg"
 sub_heading: Web Developer
 email: 
 linkedin: ''

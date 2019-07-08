@@ -1,6 +1,6 @@
 ---
 title: Nik Nieuwenhuis
-thumbnail: "/uploads/2017/11/14/william-stitt-162611.jpg"
+thumbnail: "/uploads/team-nik.jpg"
 sub_heading: Web Developer
 email: ''
 linkedin: ''

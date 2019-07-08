@@ -1,6 +1,6 @@
 ---
 title: Grant Shankster
-thumbnail: "/uploads/2017/11/14/andrew-robles-300868.jpg"
+thumbnail: "/uploads/team-grant.jpg"
 sub_heading: SEM/PPC
 email: 
 linkedin: ''

@@ -1,7 +1,7 @@
 ---
 title: Erin Bacchi
 sub_heading: Graphic Deseigner
-thumbnail: "/uploads/2017/11/14/joseph-gonzalez-399972.jpg"
+thumbnail: "/uploads/team-erin.jpg"
 email: 
 linkedin: ''
 layout: 'person'

@@ -1,9 +1,6 @@
 ---
 title: Horizon
-date: '2016-04-20T00:00:00.000+00:00'
-categories: []
-description: 'Computer-Based Training for Cogntive Behavioural Therapy: An Addictions
-  Program for Canada'
+horizon: true
 intro: "## Horizon Festival connects artists, industries, communities and audiences
   through an award-winning celebration of arts and culture.\n\n## With a 4 year relationship,
   VA had the pleasure of refreshing the website design and functionality. "
@@ -11,7 +8,8 @@ sector: Arts / Events
 services:
 - Web Design
 - Web Development
-banner_image: "/uploads/2018/02/17/bridge3.jpg"
+hero_image: ''
+hero_video: "/uploads/horizon-2019-video.mp4"
 sub_heading: Experience the Sunshine Coast's premier multi-arts festival.
 brand_primary_color: "#333"
 brand_secondary_color: "#FF00E6"

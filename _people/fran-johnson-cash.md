@@ -1,7 +1,7 @@
 ---
 title: Fran Johnson-Cash
 sub_heading: Design Director
-thumbnail: "/uploads/2017/11/14/alejandra-higareda-295605.jpg"
+thumbnail: "/uploads/team-fran.jpg"
 email: ''
 linkedin: ''
 layout: 'person'

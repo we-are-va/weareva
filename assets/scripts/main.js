@@ -143,6 +143,7 @@ $(function() {
     });
 
 
+
     // Play when in viewport
       $(window).on('scroll load', function(){
         $('.responsive-vid iframe').each( function(i){
@@ -159,6 +160,12 @@ $(function() {
           }
         });
       });
+
+
+      var vids = $("video"); 
+      $.each(vids, function(){
+             this.controls = false; 
+      }); 
 
 
 });

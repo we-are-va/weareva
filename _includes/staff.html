@@ -3,38 +3,54 @@
 {% endcomment %}
 
 {% if page.show_staff %}
-<section class="section-staff">
+
+<section class="section-staff py-9">
+
+
     <div class="container">
-            <h2 class="section-heading text-center h1">The Team</h2>
 
             <div class="row">
-                {% assign people = site.people | sample:7 %}
-                {% for person in people %}
-                    <div class="col-md-4 mb-3">
-                        <div class="post">
-                            <div class="post-header">
-                            {% if person.thumbnail %}
-                                <img class="rounded-circle d-block w-100 mb-2" alt="{{ person.title }}" src="{{ person.thumbnail | absolute_url }}">
-                            {% else %}
-                                <img class="rounded-circle" alt="{{ person.title }}" src="{{ "/img/placeholder.png" | absolute_url }}>
-                            {% endif %}
+
+                <div class="col-md-3">
+
+                    <h2 class="section-heading text-left h1">The Team</h2>
+
+                </div>
+
+                <div class="col-md-9">
+                    
+                    <div class="row d-flex justify-content-left">
+                        {% assign people = site.people | sample:7 %}
+                        {% for person in people %}
+                            <div class="col-md-4 mb-3">
+                                <div class="post row">
+                                    <div class="post-header col-md-12">
+                                    {% if person.thumbnail %}
+                                        <img class="d-block w-100 mb-2" alt="{{ person.title }}" src="{{ person.thumbnail | absolute_url }}">
+                                    {% else %}
+                                        <img class="rounded-circle" alt="{{ person.title }}" src="{{ "/img/placeholder.png" | absolute_url }}>
+                                    {% endif %}
+                                    </div>
+                                    <div class="post-body col-md-12 text-left py-1">
+                                        <h3>{{ person.title }}</h3>
+                                        {% if person.sub_heading %}
+                                        <div class="subtitle">
+                                            {{ person.sub_heading }}
+                                        </div>{% endif %}
+                                        <div class="d-none">
+                                            {{ person.content }}
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="post-body text-center py-1">
-                                <h2>
-                                   {{ person.title }}
-                                </h2>
-                                {% if person.sub_heading %}
-                                <div class="subtitle">
-                                    {{ person.sub_heading }}
-                                </div>{% endif %}
-                                <p>
-                                    {{ person.content }}
-                                </p>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
-                {% endfor %}
+
+                </div>
+
             </div>
+
+           
         </div>
     </div>
 </section>

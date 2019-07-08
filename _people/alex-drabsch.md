@@ -3,7 +3,7 @@ title: Alexandra Drabsch
 email: 
 linkedin: ''
 sub_heading: Junior Graphic Designer
-thumbnail: "/uploads/2017/11/14/jeffrey-wegrzyn-183858.jpg"
+thumbnail: "/uploads/team-alex.jpg"
 layout: 'person'
 ---
 

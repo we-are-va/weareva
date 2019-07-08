@@ -1,0 +1,85 @@
+---
+layout: default
+---
+{% comment %}
+    A general page layout. Used by default for all content on the site.
+{% endcomment %}
+
+<section class="section section-hero">
+	
+	{% if page.hero_video and page.hero_video != "" %}
+		<div class="hero-video" data-vide-bg="{{ page.hero_video | relative_url }}" data-vide-options="position: 0% 0%"></div>
+	{% else %}
+		{% if page.hero_image and page.hero_image != "" %}
+		<img class="d-block w-100" src="{{ page.hero_image | relative_url }}" alt="{{ page.title }}">
+		{% endif %}
+	{% endif %}
+	 
+	<div class="position-absolute hero-title">
+		<div class="container">
+			<div class="col-md-6">
+				<h1 class="text-primary">We are VA</h1>
+				<h2>A team committed to technical and aesthetic excellence, curiosity and the sharing of ideas.</h2>
+			</div>
+		</div>
+	</div>
+
+</section>
+
+<section class="section section-about">
+
+	<div class="container">
+      	
+      	<div class="row justify-content-center pt-6" data-aos="fade-in">
+			
+			<div class="col-md-12">
+				<figure>
+		          <img class="w-100 d-block" src="{{ site.baseurl }}/uploads/johnson-wang-iI4sR_nkkbc-unsplash.jpg" alt="{{ page.title }}">
+		        </figure>
+		    </div>
+
+      	</div>
+	    <div class="row d-flex justify-content-center align-items-start pt-1" data-aos="fade-in">
+				
+				<div class="col-md-5">
+					<figure>
+		          		<img class="w-100 d-block" src="{{ site.baseurl }}/uploads/campaign-creators-qCi_MzVODoU-unsplash.jpg" alt="{{ page.title }}">
+		        	</figure>
+				</div>
+
+				<div class="col-md-7">
+					<figure>
+		         		<img class="w-100 d-block" src="{{ site.baseurl }}/uploads/studio-republic-fotKKqWNMQ4-unsplash.jpg" alt="{{ page.title }}">
+		        	</figure>
+				</div>
+
+	    </div>
+
+	</div>
+
+</section>
+
+{% include staff.html %}
+
+
+<section class="section section-about">
+
+	<div class="container">
+      	
+      	<div class="row justify-content-left py-6" data-aos="fade-in">
+			
+			<div class="col-md-3">
+
+                    <h2 class="section-heading text-left h1">Our Philosphy</h2>
+
+             </div>
+
+            <div class="col-md-6">
+					<h3 class="h2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac auctor metus. Donec ullamcorper pharetra lectus et convallis. Nam dapibus rutrum faucibus. Donec aliquam posuere interdum. Curabitur posuere enim at magna ornare faucibus. In consequat metus scelerisque blandit tincidunt. Etiam varius eget justo ac vehicula.</h3>
+            </div>
+
+      	</div>
+
+      </div>
+
+</section>

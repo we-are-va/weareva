@@ -9,6 +9,7 @@ brand_primary_color: "#063325"
 brand_secondary_color: "#cc6216"
 slug: ''
 layout: work-single
+mic: true
 ---
 
 ## Overview

@@ -4,5 +4,6 @@ layout: work
 menu:
   navigation:
     identifier: _work
-    weight: 3
+    weight: 2
+
 ---

@@ -8,7 +8,7 @@ sector: Arts / Events
 services:
 - Web Design
 - Web Development
-hero_image: ''
+hero_image: '/uploads/HZN-Horizon-2019-01.jpg'
 hero_video: "/uploads/horizon-2019-video.mp4"
 sub_heading: Experience the Sunshine Coast's premier multi-arts festival.
 brand_primary_color: "#333"

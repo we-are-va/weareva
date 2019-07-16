@@ -1,0 +1,16 @@
+<div class="card work-teaser">
+	<h3>{{ project.title }}</h3>
+	<a href="{{ project.url | absolute_url }}" title="{{ project.title }}">
+		<figure>
+			{% if project.hero_image and project.hero_image != "" %}
+				<img class="w-100 d-block" src="{{ project.hero_image | absolute_url }}" alt="{{ project.title }}">
+			{% else %}
+				<img class="w-100 d-block" src="{{ "/img/placeholder.png" | absolute_url }}" alt="{{ project.title }}">
+			{% endif %}
+			<figcaption>
+				<h4 class="mb-0 h3">{{ project.sub_heading }}</h4>
+				<span>{{ project.sector }}</span>
+			</figcaption>
+		</figure>
+	</a>
+</div>

@@ -152,6 +152,162 @@ h4, .h4 {
   }
 }
 
+$link-color: $white;
+$link-hover: #888;
+$text-arrow-space: 16px;
+$shaft-width: 64px;
+$shaft-thickness: 2px;
+$arrow-head-width: 10px;
+$arrow-head-thickness: $shaft-thickness;
+
+.link-arrow {
+    font-size: 2em;
+    color: $white;
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: linear-gradient(
+          to right,
+          $link-hover,
+          $link-hover 50%,
+          $link-color 50%);
+          background-size: 200% 100%;
+          background-position: 100%;
+
+    &.arrow-right {
+       background-image: linear-gradient(
+          to right,
+          $link-hover,
+          $link-hover 50%,
+          $link-color 50%);
+          background-size: 200% 100%;
+          background-position: 100%;
+
+          &:hover{
+            transition: all 0.3s cubic-bezier(0.000, 0.000, 0.230, 1);
+            background-position: 0%;
+            
+            .the-arrow {
+                transform: translateX(10px);
+                transition-delay: 0.1s;
+            }
+          }
+    }
+    &.arrow-left {
+         background-image: linear-gradient(
+          to left,
+          $link-hover,
+          $link-hover 50%,
+          $link-color 50%);
+          background-size: 200% 100%;
+          background-position: 0;
+
+          &:hover{
+            transition: all 0.3s cubic-bezier(0.000, 0.000, 0.230, 1);
+            background-position: 100%;
+            
+            .the-arrow {
+                transform: translateX(-10px);
+                transition-delay: 0.1s;
+            }
+          }
+    }
+    
+    .the-arrow {
+      display: inline-block;
+      position: relative;
+      top: -10px;
+      width: $shaft-width;
+      transition: all 0.2s;
+     
+      &.-left {
+        top: -10px;
+
+        > .shaft {
+          width: $shaft-width;
+          
+          &:before,
+          &:after {
+            width: $arrow-head-width;
+            transition-delay: 0.3s;
+            transition: all 0.5s;
+            left: -8px;
+
+          }
+
+          &:before {
+            top: 1px;
+            transform: rotate(140deg);
+          }
+
+          &:after {
+            top: -1px;
+            transform: rotate(-140deg);
+          }
+        }
+      }
+      
+      &.-right {
+
+        top: -10px;
+        
+        > .shaft {
+          width: $shaft-width;
+          transition-delay: 0.2s;
+
+          &:before,
+          &:after { 
+            width: $arrow-head-width;
+            transition-delay: 0.3s;
+            transition: all 0.5s;
+          }
+          
+          &:before {
+            transform: rotate(40deg);
+          }
+          
+          &:after {
+            transform: rotate(-40deg);
+          }
+        }
+      }
+
+      > .shaft {
+        background-color: $gray;
+        display: block;
+        height: $shaft-thickness;
+        position: relative;
+        transition: all 0.2s;
+        transition-delay: 0;
+        will-change: transform;
+
+        &:before,
+        &:after {
+          background-color: $gray;
+          content: '';
+          display: block;
+          height: $arrow-head-thickness;
+          position: absolute;
+          top: 0;
+          right: 0;
+          transition: all 0.2s;
+          transition-delay: 0;
+        }
+
+        &:before {
+          transform-origin: top right;
+        }
+
+        &:after {
+          transform-origin: bottom right;
+        }
+      }
+    }
+}
+
+
 .alert {
   background: $red;
   color: $white;
@@ -159,7 +315,13 @@ h4, .h4 {
   border: none;
   z-index: 9999;
 }
+.card {
+    border: none;
+    background: transparent;
+    border-radius: 0;
 
+
+}
 
 /* Nathan Lam
    June 2, 2017

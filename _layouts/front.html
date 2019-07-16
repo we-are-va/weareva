@@ -6,7 +6,15 @@ layout: default
 {% endcomment %}
 
 
-<div id="va-slides" class="carousel slide" data-ride="carousel">
+<!-- <video class="video" muted autoplay >
+	<source src="{{site.baseurl}}/uploads/va-promo.mp4" type="video/mp4">
+</video> -->
+<div class="hero-video-front" data-vide-bg="{{site.baseurl}}/uploads/va-promo.mp4" data-vide-options="position: 0% 0%">
+	
+<button class="btn-scroll"><span class="text">Scroll</span></button>
+	
+</div>
+<!-- <div id="va-slides" class="carousel slide" data-ride="carousel">
 
   <ol class="carousel-indicators">
     <li data-target="#va-slides" data-slide-to="0" class="active"></li>
@@ -35,7 +43,7 @@ layout: default
     <span class="sr-only">Next</span>
   </a>
 
-</div>
+</div> -->
 
 
 <div class="container py-7 work-front">
@@ -51,28 +59,26 @@ layout: default
 		</div>
 
     </div>
+	
+	
+	
 
     <div class="row d-flex align-items-end py-3" data-aos="fade-in">
 			
 			<div class="col-md-4">
-				<div class="card">
-					<h3>Project Title Here</h3>
-					<img src="https://picsum.photos/640/480" class="d-block w-100" alt="...">
-					<div class="description">
-						<span>COMMUNICATIONS</span>
-					</div>
-				</div>
+				{% for project in site.work %}
+					{% if project.title == "Horizon" %}	      
+						{% include work-teaser.html %}
+					{% endif %}
+				{% endfor %}
 			</div>
 
 			<div class="col-md-8">
-				<div class="card">
-					<h3>Project Title Here</h3>
-					<img src="https://picsum.photos/800/500" class="d-block w-100" alt="...">
-					<div class="description">
-						<h4 class="mb-0 h3">Awesome tagline here</h4>
-						<span>BRANDING</span>
-					</div>
-				</div>
+				{% for project in site.work %}
+					{% if project.title == "Spero Greek Restaurant" %}	      
+						{% include work-teaser.html %}
+					{% endif %}
+				{% endfor %}
 			</div>
 
     </div>
@@ -80,23 +86,19 @@ layout: default
     <div class="row d-flex align-items-end py-3" data-aos="fade-in">
 			
 			<div class="col-md-4">
-				<div class="card">
-					<h3>Project Title Here</h3>
-					<img src="https://picsum.photos/700/750" class="d-block w-100" alt="...">
-					<div class="description">
-						<span>COMMUNICATIONS</span>
-					</div>
-				</div>
+				{% for project in site.work %}
+					{% if project.title == "Noosa Festival of Surfing" %}	      
+						{% include work-teaser.html %}
+					{% endif %}
+				{% endfor %}
 			</div>
 
 			<div class="col-md-4">
-				<div class="card">
-					<h3>Project Title Here</h3>
-					<img src="https://picsum.photos/700/400" class="d-block w-100" alt="...">
-					<div class="description">
-						<span>BRANDING</span>
-					</div>
-				</div>
+				{% for project in site.work %}
+					{% if project.title == "P&E Law" %}	      
+						{% include work-teaser.html %}
+					{% endif %}
+				{% endfor %}
 			</div>
 
 			<div class="col-md-4">
@@ -108,31 +110,31 @@ layout: default
 	<div class="row d-flex align-items-end py-3" data-aos="fade-in">
 				
 		<div class="col-md-6">
-			<div class="card">
-				<h3>Project Title Here</h3>
-				<img src="https://picsum.photos/750/750" class="d-block w-100" alt="...">
-				<div class="description">
-					<span>DIGITAL</span>
-				</div>
-			</div>
+			{% for project in site.work %}
+					{% if project.title == "Matthew Flinders Anglican College" %}	      
+						{% include work-teaser.html %}
+					{% endif %}
+			{% endfor %}
 		</div>
 
 		<div class="col-md-6">
-			<div class="card">
-				<h3>Project Title Here</h3>
-				<img src="https://picsum.photos/760/760" class="d-block w-100" alt="...">
-				<div class="description">
-					<span>BRANDING</span>
-				</div>
-			</div>
+			{% for project in site.work %}
+					{% if project.title == "MIC (Montessori International College)" %}	      
+						{% include work-teaser.html %}
+					{% endif %}
+			{% endfor %}
 		</div>
 
 	</div>
+	
+	
 
 	<div class="row py-3 text-right" data-aos="fade-in">
 
 		<div class="col-md-12">
-			<h2><a href="/work">See all work --> </a></h2>
+			
+			{% include arrow-link.html url='/work' direction="right" text='See all work' %}
+
 		</div>
 
 	</div>	

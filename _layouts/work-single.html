@@ -31,6 +31,8 @@ layout: default
 		</div>
 	</div>
 
+<button class="btn-scroll"><span class="text">Scroll</span></button>
+
 </section>
 
 <div class="hero-bg">
@@ -90,17 +92,15 @@ layout: default
 		<div class="row py-4" data-aos="fade-in">
 
 			<div class="col-sm-6">
-				<a href="/work" class="h3 text-white"><-- See all work</a>
+				{% include arrow-link.html url="/work" direction="left" text='See all work' %}
 			</div>
 
 			<div class="col-sm-6 text-right">
 
 				<div class="PageNavigation">
-				 <!--  {% if page.previous.url %}
-				    <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
-				  {% endif %} -->
 				  {% if page.next.url %}
-				    <a class="h3 text-white" href="{{page.next.url}}">Next --></a>
+				  	{% capture next_url %}{{ page.next.url }}{% endcapture %}
+				    {% include arrow-link.html url=next_url direction="right" text='Next' %}
 				  {% endif %}
 				</div>
 

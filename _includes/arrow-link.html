@@ -1,0 +1,20 @@
+<a class='link-arrow arrow-{{ include.direction }}' href='{{ include.url }}'>
+	{% if include.direction and include.direction == "left" %}
+		<span class='the-arrow -{{ include.direction }}'>
+			<span class='shaft'></span>
+		</span>
+		{{ include.text }}
+	{% else %}	
+		{{ include.text }}
+		<span class='the-arrow -{{ include.direction }}'>
+			<span class='shaft'></span>
+		</span>
+	{% endif %}
+</a>
+
+<!-- <a class='link-arrow arrow-right' href='{{ include.url }}'>
+	{{ include.text }} Right arrow
+	<span class='the-arrow -right'>
+		<span class='shaft'></span>
+	</span>
+</a> -->

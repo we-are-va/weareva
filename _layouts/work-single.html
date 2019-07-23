@@ -85,6 +85,14 @@ layout: default
 	{% if page.mfac %}
 		{% include work-mfac.html %}
 	{% endif %}
+
+	{% if page.bookingbox %}
+		{% include work-bookingbox.html %}
+	{% endif %}
+
+	{% if page.suncare %}
+		{% include work-suncare.html %}
+	{% endif %}
 	
 
 	<div class="container section-bottom">
@@ -96,11 +104,41 @@ layout: default
 			</div>
 
 			<div class="col-sm-6 text-right">
+				
+				<!-- <div class='item'>
+				        <svg preserveAspectRatio='xMidYMid slice' viewBox='0 0 500 500'>
+				          <defs>
+				            <clipPath id='clip-0'>
+				              <circle cx='0' cy='0' fill='#000' r='150px'></circle>
+				            </clipPath>
+				          </defs>
+				          <text class='svg-text' x='50%' y='50%'>
+				            Next
+				          </text>
+				          <g clip-path='url(#clip-0)'>
+				            <image height='100%' preserveAspectRatio='xMinYMin slice' width='100%' xlink:href='{{ page.next.hero_image | relative_url }}'></image>
+				           
+				            <text class='svg-masked-text' x='50%' y='50%'>
+				              	Next
+				            </text>
+				          </g>
+				        </svg>
+				</div> -->
+				<div class="PageNavigation" id="pagetransition">
 
-				<div class="PageNavigation">
 				  {% if page.next.url %}
-				  	{% capture next_url %}{{ page.next.url }}{% endcapture %}
-				    {% include arrow-link.html url=next_url direction="right" text='Next' %}
+				  <style>
+					.next-work:before {
+					   background-color: {{ page.next.brand_primary_color }};
+					}
+					.next-work:after {
+						background-image: url('{{ page.next.hero_image | relative_url }}');
+					}
+					</style>
+					<div class="next-work">
+				  		{% capture next_url %}{{ page.next.url }}{% endcapture %}
+				    	{% include arrow-link.html url=next_url direction="right" text='Next' %}
+				    </div>
 				  {% endif %}
 				</div>
 

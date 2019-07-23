@@ -1,12 +1,14 @@
 ---
 title: Matthew Flinders Anglican College
 sector: Education
+key_service: Brand Strategy
 services:
 - Brand Strategy
 - Print Design
 - Environmental Signage
 hero_image: '/uploads/MFAC_primary-photo-02.jpg'
 hero_video: ''
+teaser_image: '/uploads/MFAC_primary-photo-02.jpg'
 sub_heading: 'Educating for Excellence in Learning and Life'
 slug: ''
 brand_primary_color: "#0a3261"

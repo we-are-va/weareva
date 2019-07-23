@@ -1,0 +1,175 @@
+---
+layout: default
+---
+
+{% comment %}
+	This layout is used to generate custom landing page layouts,
+	e.g index.md and about.md
+{% endcomment %}
+
+
+<section class="about py-7">
+	<div class="container pure-g">
+		<div class="pure-u-1">
+			<div class="content content-narrow">
+				<style type="text/css">
+					span {
+					  min-width: 5px;
+					  display: inline-block;
+					  font-family: 'Source Sans Pro', sans-serif;
+					  font-size: 0.85em;
+					  letter-spacing: 1.5px;
+					  color: green;
+					}
+					.text {
+					  overflow: hidden;
+					  height: auto;
+					}
+					ul,
+					ol {
+						list-style-type: none;
+						margin: 0;
+						padding: 0;
+					}
+
+					.window {
+						width: 700px;
+						height: 500px;
+						margin: auto;
+						background-color: #000;
+						box-shadow: 0 0 25px -7px #000;
+					}
+
+					.window-top {
+						display: flex;
+						align-items: center;
+						height: 30px;
+						background-color: #202020;
+					}
+
+					.window__controls {
+						display: inline-flex;
+					}
+
+					.window__controls span {
+						width: 15px;
+						height: 15px;
+						margin-left: 10px;
+						border-radius: 50%;
+					}
+
+					.window__controls span:nth-child(1) {
+						background-color: #b22222;
+					}
+					.window__controls span:nth-child(2) {
+						background-color: #d6bf3e;
+					}
+					.window__controls span:nth-child(3) {
+						background-color: #4db434;
+					}
+
+					.window__title {
+						flex: 1;
+						text-align: center;
+						color: #b1b1b3;
+					}
+
+					.window-main {
+						padding: 0.5em;
+						height: 90%;
+						overflow: scroll;
+						color: #4e4e4e;
+					}
+
+					.window-main ol {
+						counter-reset: item;
+						font-family: "Source Code Pro", monospace;
+					}
+
+					.window-main ol li {
+						margin-bottom: 3px;
+					}
+
+					.window-main ol li:before {
+						content: counter(item) "  ";
+						counter-increment: item;
+						padding: 0 10px;
+					}
+
+					.tag {
+						color: #4d86b9;
+					}
+					.attr {
+						color: #8dc6e3;
+					}
+					.val {
+						color: #c58b74;
+					}
+					.text {
+						color: #d4d4d4;
+					}
+					.comment {
+						color: #517343;
+					}
+
+					@media only screen and (max-width: 601px) {
+						.window {
+							width: 350px;
+							height: 350px;
+							font-size: 0.65em;
+						}
+
+						.window__controls span {
+							width: 10px;
+							height: 10px;
+							margin-left: 5px;
+						}
+
+						.window-main ol li:before {
+							padding: 0;
+						}
+					}
+
+				</style>
+				<!-- <p class="text" data-text="/nstruct group_info init_groups = { .usage = ATOMIC_INIT(2) }; /n /nstruct group_info *groups_alloc(int gidsetsize){ /n    struct group_info *group_info; /n    int nblocks; /n    int i; /n /n /n    nblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK; /n    /* Make sure we always allocate at least one indirect block pointer */ /n    nblocks = nblocks ? : 1; /n    group_info = kmalloc(sizeof(*group_info) + nblocks*sizeof(gid_t *), GFP_USER); /n    if (!group_info) /n        return NULL; /n /n    group_info->ngroups = gidsetsize; /n    group_info->nblocks = nblocks; /n    atomic_set(&group_info->usage, 1); /n /n    if (gidsetsize <= NGROUPS_SMALL) /n        group_info->blocks[0] = group_info->small_block; /n    else { /n        for (i = 0; i < nblocks; i++) { /n            gid_t *b; /n            b = (void *)__get_free_page(GFP_USER); /n            if (!b) /n                goto out_undo_partial_alloc; /n            group_info->blocks[i] = b; /n        } /n    } /n    return group_info; /n /n /nout_undo_partial_alloc: /n /n    while (--i >= 0) { /n /n        free_page((unsigned long)group_info->blocks[i]); /n /n    } /n /n    kfree(group_info); /n /n    return NULL; /n /n} /n /n /n /nEXPORT_SYMBOL(groups_alloc); /n /n /n /nvoid groups_free(struct group_info *group_info) /n /n{ /n /n    if (group_info->blocks[0] != group_info->small_block) { /n /n        int i; /n /n        for (i = 0; i < group_info->nblocks; i++) /n /n/nstruct group_info init_groups = { .usage = ATOMIC_INIT(2) }; /n /nstruct group_info *groups_alloc(int gidsetsize){ /n    struct group_info *group_info; /n    int nblocks; /n    int i; /n /n /n    nblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK; /n    /* Make sure we always allocate at least one indirect block pointer */ /n    nblocks = nblocks ? : 1; /n    group_info = kmalloc(sizeof(*group_info) + nblocks*sizeof(gid_t *), GFP_USER); /n    if (!group_info) /n        return NULL; /n /n    group_info->ngroups = gidsetsize; /n    group_info->nblocks = nblocks; /n    atomic_set(&group_info->usage, 1); /n /n    if (gidsetsize <= NGROUPS_SMALL) /n        group_info->blocks[0] = group_info->small_block; /n    else { /n        for (i = 0; i < nblocks; i++) { /n            group_info->blocks[i] = b; /n        } /n    } /n    return group_info; /n /n /nout_undo_partial_alloc: /n /n    while (--i >= 0) { /n /n        free_page((unsigned long)group_info->blocks[i]); /n /n    } /n /n    kfree(group_info); /n /n    return NULL; /n /n} /n /n /n /nEXPORT_SYMBOL(groups_alloc); /n /n /n /nvoid groups_free(struct group_info *group_info) /n /n{ /n /n    if (group_info->blocks[0] != group_info->small_block) { /n /n        int i; /n /n        for (i = 0; i < group_info->nblocks; i++) /n /n echo('Sorry, the Page could not be found.');"></p> -->
+
+				<section class="window">
+					<div class="window-top">
+						<div class="window__controls">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="window__title">404.html - Sorry this page could not be found.</div>
+					</div>
+					<div class="window-main">
+						<p class="text" data-text="/nstruct group_info init_groups = { .usage = WE_ARE_VA_INIT(2) }; /n /nstruct group_info *groups_alloc(int gidsetsize){ /n    struct group_info *group_info; /n    int nblocks; /n    int i; /n /n /n    nblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK; /n    /* Make sure we always allocate at least one indirect block pointer */ /n    nblocks = nblocks ? : 1; /n    group_info = kmalloc(sizeof(*group_info) + nblocks*sizeof(gid_t *), GFP_USER); /n    if (!group_info) /n        return NULL; /n /n    group_info->ngroups = gidsetsize; /n    group_info->nblocks = nblocks; /n    WE_ARE_VA(&group_info->usage, 1); /n /n    if (gidsetsize <= NGROUPS_SMALL) /n        group_info->blocks[0] = group_info->small_block; /n    else { /n        for (i = 0; i < nblocks; i++) { /n            gid_t *b; /n            b = (void *)__get_free_page(GFP_USER); /n            if (!b) /n                goto out_undo_partial_alloc; /n            group_info->blocks[i] = b; /n        } /n    } /n    return group_info; /n /n /nout_undo_partial_alloc: /n /n    while (--i >= 0) { /n /n        free_page((unsigned long)group_info->blocks[i]); /n /n    } /n /n    kfree(group_info); /n /n    return NULL; /n /n} /n /n /n /WE_ARE_VA(groups_alloc); /n /n /n /nvoid groups_free(struct group_info *group_info) /n /n{ /n /n    if (group_info->blocks[0] != group_info->small_block) { /n /n        int i; /n /n        for (i = 0; i < group_info->nblocks; i++) /n /n echo('Sorry, this page could not be found.')/n /n echo('Sorry, this page could not be found.')/n /n echo('Sorry, this page could not be found.')/n /n echo('Sorry, this page could not be found')./n /n echo('Sorry, this page could not be found.')/n /n echo('Sorry, this page could not be found.');"></p>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	jQuery(function() {
+	var printText = jQuery('.text').data('text');
+
+		var contentArray = printText.split('/n');
+		jQuery.each(contentArray, function(index, newLine) {
+		  jQuery('.text').append('<span style="display:block;" id="'+index+'"></span>');
+		  
+		  var lineID = index;
+		  var self = $(this);
+		    setTimeout(function () {
+		      jQuery.each(self, function(index, chunk){
+		          setTimeout(function () {
+		            jQuery('#'+lineID).append("<span>"+chunk+"</span>");
+		            jQuery('.window-main').scrollTop($(document).height());
+		          }, index*5);
+		      });
+		      
+		    }, index*100);
+		});
+		});
+</script>

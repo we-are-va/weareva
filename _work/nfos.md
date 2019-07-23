@@ -1,12 +1,14 @@
 ---
 title: Noosa Festival of Surfing
 sector: Event
+key_service: Digital
 services:
 - Brand Strategy
 - Brand Design
 - Print Design
 - Website Design
 - Website Development
+teaser_image: '/uploads/nfos/nfos-hero.jpg'
 hero_image: '/uploads/nfos/nfos-hero.jpg'
 hero_video: ''
 sub_heading: 'Get swept up in the romance and living art of longboarding.'

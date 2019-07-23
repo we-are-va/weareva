@@ -5,11 +5,13 @@ intro: "## Horizon Festival connects artists, industries, communities and audien
   through an award-winning celebration of arts and culture.\n\n## With a 4 year relationship,
   VA had the pleasure of refreshing the website design and functionality. "
 sector: Arts / Events
+key_service: Digital
 services:
 - Web Design
 - Web Development
 hero_image: '/uploads/HZN-Horizon-2019-01.jpg'
 hero_video: "/uploads/horizon-2019-video.mp4"
+teaser_image: '/uploads/HZN-Horizon-2019-01.jpg'
 sub_heading: Experience the Sunshine Coast's premier multi-arts festival.
 brand_primary_color: "#333"
 brand_secondary_color: "#FF00E6"

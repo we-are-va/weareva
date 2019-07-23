@@ -19,6 +19,21 @@ $(function() {
     $navbarLayout.collapse('hide');
   });
 
+  //  var aniNextLink = function(callback) {
+    
+  //      $('.next-work').addClass('animated');
+
+  //  }
+  // $('.PageNavigation a').on('click', function(e) {
+  //     e.preventDefault();
+      
+  //     var url = $(e.currentTarget).attr('href');
+  //     aniNextLink(function() {
+  //         alert('go to ' + url);
+  //         window.location.href = 'http://www.google.com';
+  //     });
+  // });
+
   // ScrollReveal
   // window.sr = new ScrollReveal();
   // sr.reveal('section h2, .reveal, section header');
@@ -39,11 +54,11 @@ $(function() {
   });
 
   // $(function() {
-  //   $('#main').smoothState({ debug: true });
+  //   $('#pagetransition').smoothState({ debug: true });
   // });
   // $(function(){
   //   'use strict';
-  //   var $page = $('#main'),
+  //   var $page = $('#pagetransition'),
   //       options = {
   //         debug: true,
   //         prefetch: true,
@@ -126,20 +141,6 @@ $(function() {
 
         }, 'xml');
 
-    });
-
-    $('.carousel-item', '.show-neighbors').each(function(){
-      var next = $(this).next();
-      if (! next.length) {
-        next = $(this).siblings(':first');
-      }
-      next.children(':first-child').clone().appendTo($(this));
-    }).each(function(){
-      var prev = $(this).prev();
-      if (! prev.length) {
-        prev = $(this).siblings(':last');
-      }
-      prev.children(':nth-last-child(2)').clone().prependTo($(this));
     });
 
 

@@ -11,22 +11,8 @@ layout: default
 	
 		<div class="row d-flex align-items-end py-3" data-aos="fade-in">
 		{% for project in site.work %}
-					<div class="col-sm-6">
-						<div class="card">
-							<div class="card-header">
-							{% if project.hero_image and project.hero_image != "" %}
-							<a href="{{ project.url | absolute_url }}">
-								<img class="w-100 d-block" src="{{ project.hero_image | absolute_url }}" alt="{{ project.title }}">
-							</a>
-							{% else %}
-								<img class="w-100 d-block" src="{{ "/img/placeholder.png" | absolute_url }}" alt="{{ project.title }}">
-							{% endif %}
-							</div>
-							<div class="card-body">
-								<h3><a href="{{ project.url | absolute_url }}">{{ project.title }}</a></h3>
-								<p>{{ project.sub_heading | slice: 0, 80 }}</p>
-							</div>
-						</div>
+					<div class="col-sm-6 mb-6">
+						{% include work-teaser.html %}
 					</div>
 		{% endfor %}
 	</div>

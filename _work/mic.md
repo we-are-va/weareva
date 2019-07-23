@@ -1,14 +1,16 @@
 ---
 title: MIC (Montessori International College)
 sector: Education
+key_service: Branding
 services:
 - Brand Strategy
 - Brand Design
 - Print Design
 - Website Design
 - Website Development
-hero_image: '/uploads/mic/160061-0267.jpg'
+hero_image: '/uploads/mic/160061-0448.jpg'
 hero_video: ''
+teaser_image: '/uploads/mic/160061-0267.jpg'
 sub_heading: 'Freedom within limits'
 brand_primary_color: "#063325"
 brand_secondary_color: "#cc6216"

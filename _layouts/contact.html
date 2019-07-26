@@ -1,0 +1,140 @@
+---
+layout: default
+---
+
+{% comment %}
+	This layout is used to generate custom landing page layouts,
+	e.g index.md and about.md
+{% endcomment %}
+
+<!-- <section class="section section-hero">
+	
+	{% if page.hero_video and page.hero_video != "" %}
+		<div class="hero-video" data-vide-bg="{{ page.hero_video | relative_url }}" data-vide-options="position: 0% 0%"></div>
+	{% else %}
+		{% if page.hero_image and page.hero_image != "" %}
+		<img class="d-block w-100" src="{{ page.hero_image | relative_url }}" alt="{{ page.title }}">
+		{% endif %}
+	{% endif %}
+	 
+	<div class="position-absolute hero-title">
+		<div class="container">
+			<div class="col-md-6">
+				<h1 class="text-primary">{{ page.title }}</h1>
+				<h2>{{ page.heading }}</h2>
+			</div>
+		</div>
+	</div>
+
+</section> -->
+<section class="bg-secondary section-contact-form pt-7">
+	<div class="container pure-g">
+		<div class="pure-u-1">
+			<div class="content">
+				
+				<div class="row py-4">
+					
+					<div class="col-md-8">
+						
+						<h1>Starting a new project or want to collaborate with us?</h1>
+						<h2 class="h1">Get in touch on <a href="tel:+61754437525" class="link-tel">+61 7 5443 7525</a> or <a href="mailto:hello@weareva.com.au" class="link-email">hello@weareva.com.au</a></h2>
+						
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section-contact-us pt-7 bg-grey">
+	<div class="container pure-g">
+		<div class="pure-u-1">
+			<div class="content content-narrow">
+								
+				<div class="row pt-3">
+						
+						<div class="col-sm-4">
+							<h3>Find Us</h3>
+						</div>
+
+						<div class="col-sm-5">
+							<h3>10/127 Sugar Road<br>Maroochydore, QLD, AU</h3>
+						</div>
+						
+				</div>
+				<div class="row pb-3">
+						
+						<div class="col-sm-4">
+							<h3>Work with Us</h3>
+						</div>
+
+						<div class="col-sm-5">
+							<h3>Send your folio to <a href="mailto:hello@weareva.com.au" class="link-email">work@weareva.com.au</a></h3>
+						</div>
+						
+				</div>
+
+				<div class="row">
+						
+						<div class="col-sm-4">
+							<h3>Follow us</h3>
+						</div>
+
+						<div class="col-sm-5">
+							<ul class="h3 list-unstyled">
+			                    <li><a class="social-link" target="_blank" href="https://www.facebook.com/thevariousartists/">Facebook</a></li>
+			                    <li><a class="social-link" target="_blank" href="https://www.instagram.com/thevariousartists_au/">Instagram</a></li>
+			                    <li><a class="social-link" target="_blank" href="https://www.linkedin.com/company/the-various-artists/about/">LinkedIn</a></li>
+			                </ul>
+						</div>
+						
+				</div>
+
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section-contact-map pt-7">
+
+						<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+						   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+						   crossorigin=""/>
+						   <!-- Make sure you put this AFTER Leaflet's CSS -->
+						   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+						     integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+						     crossorigin=""></script>
+
+
+							<div id="va-map" style="height: 600px; width: 100%"></div>
+						  
+						   <script>
+						  	
+
+						  	var mapBoxUrl = 'https://api.mapbox.com/styles/v1/weareva/cjyi712md0bwv1cmp0p6kbo2b/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoid2VhcmV2YSIsImEiOiJjanlnaWhmNHkwMWZqM21tcmc2enljNXdtIn0.H9l0Ja6LLbiA-KrpvnKYjg';
+
+							var mapboxTiles = L.tileLayer(mapBoxUrl, {
+		    				
+		    					attribution: '© <a href="https://www.mapbox.com/map-feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+				            	tileSize: 512,
+				            	zoomOffset: -1
+							});
+
+							var map = L.map('va-map', {
+								scrollWheelZoom: false
+							})
+							    .addLayer(mapboxTiles)
+							    .setView([-26.672445, 153.096538], 16);
+
+							var wearvaIcon = L.icon({
+							        iconUrl: '/assets/images/logo-bw.svg',
+							        iconSize: [60, 31], // size of the icon
+							        });
+
+						   var marker = L.marker([-26.672445, 153.096538], {icon: wearvaIcon}).addTo(map);
+
+						  </script>
+</section>
+

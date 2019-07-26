@@ -23,6 +23,9 @@ GEM
       jekyll (~> 3.3)
     jekyll-menus (0.6.0)
       jekyll (~> 3.1)
+    jekyll-responsive-image (1.5.2)
+      jekyll (>= 2.0, < 4.0)
+      rmagick (>= 2.0, < 3.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
     jekyll-tagging (1.1.0)
@@ -43,6 +46,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    rmagick (2.16.0)
     rouge (2.2.1)
     ruby_dep (1.5.0)
     safe_yaml (1.0.4)
@@ -60,8 +64,9 @@ DEPENDENCIES
   jekyll-archives
   jekyll-feed (~> 0.6)
   jekyll-menus
+  jekyll-responsive-image
   jekyll-tagging
   tzinfo-data
 
 BUNDLED WITH
-   1.16.2
+   1.17.2

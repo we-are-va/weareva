@@ -8,10 +8,10 @@ layout: default
 
 <div class="container py-8 ">
 
-	
-		<div class="row d-flex align-items-end py-3" data-aos="fade-in">
+		
+		<div class="row d-flex align-items-end py-3">
 		{% for project in site.work %}
-					<div class="col-sm-6 mb-6">
+					<div class="col-sm-6 mb-6" data-aos="fade-in">
 						{% include work-teaser.html %}
 					</div>
 		{% endfor %}
